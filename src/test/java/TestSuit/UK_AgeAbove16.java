@@ -1,5 +1,7 @@
 package TestSuit;
 
+import org.testng.annotations.Listeners;
+
 import org.testng.annotations.Test;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -8,6 +10,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+
+//@Listeners(TestSuit.ExtentReportsManager.class)
 public class UK_AgeAbove16 {
 	
 	WebDriver driver;
