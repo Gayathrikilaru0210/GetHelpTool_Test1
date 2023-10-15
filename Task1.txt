@@ -1,0 +1,328 @@
+                   TASK1
+                .............
+                 
+                 User Story
+                 As a citizen of the UK
+                 I need to know what help I can get with my NHS costs
+                 So that I can get the treatment I need
+         .....................................................
+         ......................................................
+         
+         What treatment you need
+         
+         input:
+         
+         
+
+Step1:
+
+Launch wedDriver
+
+Step2:
+
+Open HelpTool URL
+
+Step3:
+
+Click on StartNow button (xpath://input[@class='button button-get-started'])
+
+Step4:
+
+Select whichCountry do you live in (citizen UK
+--------England(Xpath://input[@id='radio-england']
+--------Scotland(Xpath:radio-scotland)
+--------Wales(Xpath:radio-wales)
+-------NorthernIreland(Xapth:radio-nire)
+
+click on next
+//input[@value='Next']
+
+
+Step5:
+
+Is your GP practice in Scotland or Wales? - 
+		Check what help you could get to pay for NHS costs - NHSBSA
+	
+Is your GP practice in Scotland or Wales
+//input[@id='radio-no']
+//input[@id='radio-yes']
+
+step6:
+
+Which country is your dental practice in?
+
+//input[@name='dentalPracticeCountry' and @value='ENGLAND']
+SCOTLAND
+WALES
+NORTHERN_IRELAND
+NOT_REGISTERED_WITH_DENTAL_PRACTICE
+
+Step7:
+
+click on next
+
+//input[@value='Next']
+
+step8:
+
+What is your date of birth?
+
+Day://input[@name='dateOfBirth.day']
+Month://input[@name='dateOfBirth.month']
+Year://input[@name='dateOfBirth.year']
+
+step9:
+Why we ask for your date of birth
+Why we ask for your date of birth
+
+verify if you see any text contains We use your date of birth to work out your age. Depending on where you live, your age could entitle you to help with NHS costs, such as free prescriptions or dental treatment.
+
+
+step10:
+click on next //input[@value='Next']
+
+step11:
+
+
+if clicked on next with out entering date of birth there has to be reminder saying "There is a problem"
+then enter date of birth and click on next
+
+step12:
+Do you live with a partner?
+//input[@name="partner" and @value="Yes"]
+//input[@name="partner" and @value="No"]
+
+Click next
+
+step13:
+
+Do you or your partner claim any benefits or tax credits?
+
+//input[@name="benefitsOrTaxCredits" and @value='Yes']
+//input[@name="benefitsOrTaxCredits" and @value='No']
+
+click next
+
+Step14:
+
+Do you or your partner get paid Universal Credit?
+//input[@value="YES_I_RECEIVED_UNIVERSAL_CREDIT"]
+//input[@value="NOT_YET"]
+//input[@value="NO_I_GET_DIFFERENT_BENEFIT"](found a different mapping here(xpath shows I and the actual text shows "we" in the tool what is correct)
+
+click next
+
+step15:
+As part of your joint Universal Credit, do you have any of these?
+//input[@name='universalCreditIncludePayments' and @value='Yes']
+//input[@name='universalCreditIncludePayments' and @value='No']
+
+click next
+
+step16:
+
+Did you and your partner have a combined take-home pay of £935 or less in your last Universal Credit period?
+
+step17:click on "Where to find your take-home pay" to see the info
+
+//input[@name='universalCreditTakeHomePay' and @value='Yes']
+//input[@name='universalCreditTakeHomePay' and @value='No']
+
+click on next
+
+step18:
+
+take the screenshots to see what help you get 
+
+verify if you are able to see this text "You get free:"
+verify if you see "You get money off:"
+
+
+Sceanrio1:
+     1.England
+     2.any value
+     3.any value
+     4.dateofbirth(dateofbirth bloc is accepting morethan 2 digits)
+     5.patner yes
+     6.you or your patner claim taxbenefits  yes
+     7.Universal Credit yes
+     8.As part of your joint Universal Credit, do you have any of these yes
+	 9.935 nO Scenario
+	 10.pregnent //input[@name='pregnantOrGivingBirth' and @value='Yes']
+	 11.injury   //input[@name='warPension' and @value='Yes']
+	 12.diabeties////input[@name='diabetes' and @value='Yes']
+	 13.diabetiesMedication //input[@name='diabetesMedication'and @value='Yes']
+	 14.incareHome //input[@name='inCareHome' and @value='Yes']
+	 15.localCouncilAssessed  //input[@name='localCouncilAssessed' and @value='Yes']
+	 
+Scenario2:
+
+     1.England
+     2.any value
+     3.any value
+     4.dateofbirth not given should show error message
+     
+Sceanrio3:
+     1.England
+     2.any value
+     3.any value
+     4.dateofbirth(date,month block should take only 2 digits while entering and year shouldn't take string value  is accepting morethan 2 digits)
+    
+Sceanrio4:
+     1.England
+     2.any value
+     3.any value
+     4.dateofbirth under16(date,month block should take only 2 digits while entering and year shouldn't take string value  is accepting morethan 2 digits)
+     helps you get are
+     
+     Because you're under 16:
+
+You get free:
+ NHS prescriptions
+ NHS dental check-ups and treatment
+ sight tests
+ NHS wigs and fabric supports
+You get money off:
+ new glasses or contact lenses
+ repairing or replacing your glasses or contact lenses
+
+
+Sceanrio7:
+     1.England
+     2.any value
+     3.any value
+     4.dateofbirth(dateofbirth bloc is accepting morethan 2 digits)
+     5.patner No
+     6.Do you claim any tax benefits  No
+     7.pregnent yes/no //input[@name='pregnantOrGivingBirth' and @value='Yes']
+	 8.injury  yes/no //input[@name='warPension' and @value='Yes']
+	 9.diabeties yes ////input[@name='diabetes' and @value='Yes']
+	 10.diabetiesMedication yes//input[@name='diabetesMedication'and @value='Yes']
+	 11.incareHome //input[@name='inCareHome' and @value='Yes']
+	 12.localCouncilAssessed  //input[@name='localCouncilAssessed' and @value='Yes']
+Sceanrio 8:
+     1.England
+     2.any value
+     3.any value
+     4.dateofbirth(dateofbirth bloc is accepting morethan 2 digits)
+     5.patner No
+     6.Do you claim any tax benefits  No
+     7.pregnent yes/no //input[@name='pregnantOrGivingBirth' and @value='Yes']
+	 8.injury  yes/no //input[@name='warPension' and @value='Yes']
+	 9.diabeties NO ////input[@name='diabetes' and @value='Yes']
+	 10.medicalConditiones confirmed yes/no  name=medicalConditionConfirmed
+	 11.glaucoma   yes  name=glaucoma
+	 12.incareHome yes//input[@name='inCareHome' and @value='Yes']
+	 13.localCouncilAssessed  //input[@name='localCouncilAssessed' and @value='Yes'] 
+
+Sceanrio 9:
+     1.England
+     2.any value
+     3.any value
+     4.dateofbirth(dateofbirth bloc is accepting morethan 2 digits)
+     5.patner No
+     6.Do you claim any tax benefits  No
+     7.pregnent yes/no //input[@name='pregnantOrGivingBirth' and @value='Yes']
+	 8.injury  yes/no //input[@name='warPension' and @value='Yes']
+	 9.diabeties NO ////input[@name='diabetes' and @value='Yes']
+	 10.medicalConditiones confirmed yes/no  name=medicalConditionConfirmed
+	 11.glaucoma   yes  name=glaucoma
+	 12.incareHome No//input[@name='inCareHome' and @value='Yes']
+	 13.haveSavings  yes	name=haveSavings
+	 you will get only nhs prescriptions
+	 
+Sceanrio 10:
+     1.England
+     2.any value
+     3.any value
+     4.dateofbirth(dateofbirth bloc is accepting morethan 2 digits)
+     5.patner No
+     6.Do you claim any tax benefits  No
+     7.pregnent yes/no //input[@name='pregnantOrGivingBirth' and @value='Yes']
+	 8.injury  yes/no //input[@name='warPension' and @value='Yes']
+	 9.diabeties NO ////input[@name='diabetes' and @value='Yes']
+	 10.medicalConditiones confirmed yes/no  name=medicalConditionConfirmed
+	 11.glaucoma   yes  name=glaucoma
+	 12.incareHome No//input[@name='inCareHome' and @value='Yes']
+	 13.haveSavings  no	name=haveSavings
+	options 1 and 2
+	
+Sceanrio11:
+     1.England
+     2.any value
+     3.any value
+     4.dateofbirth(dateofbirth bloc is accepting morethan 2 digits)
+     5.patner yes
+     6.you or your patner claim taxbenefits  yes
+     7.Universal Credit No
+     8.Universal Credit decision  click on next option
+     9.Do you or your partner get any of these benefits?
+         //input[@value='TAX_CREDIT']
+         INCOME_SUPPORT
+         ESA
+         JSA
+         PENSION_CREDIT
+    10.direct to result
+    
+Sceanrio11:
+     1.England
+     2.any value
+     3.any value
+     4.dateofbirth(dateofbirth bloc is accepting morethan 2 digits)
+     5.patner yes
+     6.you or your patner claim taxbenefits  yes
+     7.Universal Credit No
+     8.Universal Credit decision  click on next option
+     9.Do you or your partner get any of these benefits?
+         None
+         cliick on //summary[@aria-controls='benefits']to see info
+    10.pregnent yes/no //input[@name='pregnantOrGivingBirth' and @value='Yes']
+	11.injury  yes/no //input[@name='warPension' and @value='Yes']
+	12.diabeties yes
+	
+    
+         
+senario12:
+
+     1.England
+     2.any value
+     3.any value
+     4.dateofbirth(dateofbirth bloc is accepting morethan 2 digits)
+     5.patner yes
+     6.you or your patner claim taxbenefits  yes
+     7.Universal Credit No
+     8.Universal Credit decision  click on next option
+     9.Do you or your partner get any of these benefits?
+         None
+         cliick on //summary[@aria-controls='benefits']to see info
+    10.pregnent yes/no //input[@name='pregnantOrGivingBirth' and @value='Yes']
+	11.injury  yes/no //input[@name='warPension' and @value='Yes']
+	12.diabeties no flow
+	13.diabetiesMedication no //input[@name='diabetesMedication'and @value='Yes']
+	14.medicalConditionConfirmed yes/no
+	 15.incareHome yes//input[@name='inCareHome' and @value='Yes']
+	 16.localCouncilAssessed  //input[@name='localCouncilAssessed' and @value='Yes']
+	 
+senario13:
+
+     1.England
+     2.any value
+     3.any value
+     4.dateofbirth(dateofbirth bloc is accepting morethan 2 digits)
+     5.patner yes
+     6.you or your patner claim taxbenefits  yes
+     7.Universal Credit No
+     8.Universal Credit decision  click on next option
+     9.Do you or your partner get any of these benefits?
+         None
+         cliick on //summary[@aria-controls='benefits']to see info
+    10.pregnent yes/no //input[@name='pregnantOrGivingBirth' and @value='Yes']
+	11.injury  yes/no //input[@name='warPension' and @value='Yes']
+	12.diabeties no flow
+	13.diabetiesMedication no //input[@name='diabetesMedication'and @value='Yes']
+	14.medicalConditionConfirmed yes/no
+	 15.incareHome no//input[@name='inCareHome' and @value='Yes']
+	 16.haveSavings yes/no
+
+result window
+         
