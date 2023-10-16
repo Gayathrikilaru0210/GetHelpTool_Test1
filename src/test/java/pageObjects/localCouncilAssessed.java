@@ -1,0 +1,23 @@
+package pageObjects;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+public class localCouncilAssessed {
+	
+	public WebDriver driver;
+	//constructor
+	localCouncilAssessed(WebDriver driver){
+		this.driver=driver;
+		PageFactory	.initElements(driver,this);	
+	}
+	
+	//WebElements
+	@FindBy(xpath="//input[@class='button button-get-started']")
+	public WebElement start;
+	
+	
+	
+}

@@ -1,33 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite parallel="tests" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <listeners>
-    <listener class-name="TestSuit.TestNGListeners"/>
+    <listener class-name="TestSuit.ExtentReportsManager"/>
   </listeners>
-  <test thread-count="5" parallel="tests" name="Default test(failed)">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="TestSuit.UK_combinedTakeHomePayLessOrEqual£435_No">
+      <class name="TestSuit.TC1_StartPageTestcase">
         <methods>
-          <include name="Questionaire5"/>
-          <include name="Questionaire4"/>
           <include name="StartTool"/>
-          <include name="Questionaire3"/>
-          <include name="Questionair7"/>
-          <include name="Questionaire2"/>
-          <include name="Questionaire8"/>
-          <include name="Questionaire6"/>
-          <include name="Questionaire1"/>
-          <include name="Questionaire13"/>
-          <include name="Questionaire14"/>
-          <include name="Questionaire11"/>
-          <include name="Questionaire12"/>
-          <include name="Questionaire17"/>
-          <include name="Questionaire9"/>
-          <include name="Questionaire15"/>
-          <include name="Questionaire16"/>
-          <include name="Questionaire10"/>
         </methods>
-      </class> <!-- TestSuit.UK_combinedTakeHomePayLessOrEqual£435_No -->
+      </class> <!-- TestSuit.TC1_StartPageTestcase -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

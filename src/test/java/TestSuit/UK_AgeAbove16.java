@@ -91,8 +91,8 @@ void Questionaire6() {
 	
 	System.out.println(driver.getTitle());
 	//Do you or your partner claim any benefits or tax credits?
-		 driver.findElement(By.xpath("//input[@name=\"benefitsOrTaxCredits\" and @value='Yes']")).click();
-		 //driver.findElement(By.xpath("//input[@name=\"benefitsOrTaxCredits\" and @value='No']")).click();
+		 driver.findElement(By.xpath("//input[@name='benefitsOrTaxCredits' and @value='Yes']")).click();
+		 //driver.findElement(By.xpath("//input[@name='benefitsOrTaxCredits' and @value='No']")).click();
 		 
 	 //click on Next
 	 driver.findElement(By.xpath("//input[@value='Next']")).click(); 
@@ -104,7 +104,7 @@ void Questionair7() {
 	//Do you or your partner get paid Universal Credit?
 		 driver.findElement(By.xpath("//input[@value='YES_I_RECEIVED_UNIVERSAL_CREDIT']")).click();
 		 //driver.findElement(By.xpath("//input[@value='NOT_YET']")).click();
-		 //driver.findElement(By.xpath("///input[@value='NO_I_GET_DIFFERENT_BENEFIT']")).click();
+		 //driver.findElement(By.xpath("//input[@value='NO_I_GET_DIFFERENT_BENEFIT']")).click();
 		 
 	 //click on Next
 	 driver.findElement(By.xpath("//input[@value='Next']")).click(); 
