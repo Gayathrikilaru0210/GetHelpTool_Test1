@@ -14,9 +14,10 @@ public class UK_AgeBelow16 {
  
 	@Test(priority=0)
   void StartTool() {
-		WebDriverManager.chromedriver().setup();
+		//WebDriverManager.chromedriver().setup();
 		driver = new ChromeDriver();
 		driver.get("https://services.nhsbsa.nhs.uk/check-for-help-paying-nhs-costs/start");
+		driver.manage().window().maximize();
 		System.out.println(driver.getTitle());
 		driver.findElement(By.xpath("//input[@class='button button-get-started']")).click();
 	  
@@ -67,7 +68,6 @@ void Questionaire4() {
 		 driver.findElement(By.xpath("//input[@name='dateOfBirth.day']")).sendKeys("02");
 		 driver.findElement(By.xpath("//input[@name='dateOfBirth.month']")).sendKeys("10");
 		 driver.findElement(By.xpath("//input[@name='dateOfBirth.year']")).sendKeys("2019");
-		 
 	 //click on Next
 	 driver.findElement(By.xpath("//input[@value='Next']")).click(); 
 	  }
@@ -100,5 +100,6 @@ void Questionaire11() {
 	
 	System.out.println(driver.getTitle());
 	driver.quit();
+	
 	}
 }

@@ -18,9 +18,10 @@ public class UK_AgeAbove16 {
  
 	@Test(priority=0)
   void StartTool() {
-		WebDriverManager.chromedriver().setup();
+		//WebDriverManager.chromedriver().setup();
 		driver = new ChromeDriver();
 		driver.get("https://services.nhsbsa.nhs.uk/check-for-help-paying-nhs-costs/start");
+		driver.manage().window().maximize();
 		System.out.println(driver.getTitle());
 		driver.findElement(By.xpath("//input[@class='button button-get-started']")).click();
 	  

@@ -32,7 +32,7 @@ public class getHelp {
 	 
 	 WebElement start=driver.findElement(By.xpath("//input[@class='button button-get-started']"));
 	 File tool= start.getScreenshotAs(OutputType.FILE);
-	 File trg=new File("C:\\Users\\home\\eclipse-workspace\\seleniumProject\\Screenshots\\NHSGetHelpToolStartPageStratButton.png");
+	 File trg=new File("C:\\Users\\home\\eclipse-workspace\\\\Screenshots\\NHSGetHelpToolStartPageStratButton.png");
 	 FileUtils.copyFile(tool,trg);
 	 driver.findElement(By.xpath("//input[@class='button button-get-started']")).click();
 	 //click on England

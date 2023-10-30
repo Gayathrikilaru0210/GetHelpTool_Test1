@@ -49,7 +49,7 @@ public class steps {
 	
 	@Given("browser is launched")
 	public void browser_is_launched() {
-		WebDriverManager.chromedriver().setup();
+		//WebDriverManager.chromedriver().setup();
 		driver = new ChromeDriver();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(100));
 		driver.manage().window().maximize();
@@ -130,7 +130,6 @@ public void the_user_clicks_on_patner_no_element_at_the_patner_page_page() {
 }
 	
 
-@After
 @Then("the user takes the screenshot {string}")
 public void the_user_takes_the_screenshot(Scenario scenario) throws PendingException {
 	 

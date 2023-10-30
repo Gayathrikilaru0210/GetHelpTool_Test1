@@ -29,7 +29,7 @@ public class UK_combinedTakeHomePayLessOrEqual£435_No {
 	@Parameters({"browser"})
   void StartTool(String br) {
 		if(br.equals("chrome")){
-		WebDriverManager.chromedriver().setup();
+		//WebDriverManager.chromedriver().setup();
 		driver = new ChromeDriver();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(100));
 		driver.manage().window().maximize();
@@ -279,14 +279,15 @@ void Questionaire10() {
 		  System.out.println("you will not get money off");
 	  }
 	}
-	
-@AfterClass
+
+@Test(priority=20)
 void Questionaire11() {
 	
 	System.out.println(driver.getTitle());
-	driver.close();
+	driver.quit();
 	}
 
 }	
+
 
 

@@ -4,13 +4,15 @@
   <listeners>
     <listener class-name="TestSuit.ExtentReportsManager"/>
   </listeners>
-  <test thread-count="5" name="Default test(failed)">
+  <test thread-count="5" name="Test(failed)">
+    <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="TestSuit.TC1_StartPageTestcase">
+      <class name="TestSuit.UK_combinedTakeHomePayLessOrEqual£435_No">
         <methods>
           <include name="StartTool"/>
+          <include name="Questionaire10"/>
         </methods>
-      </class> <!-- TestSuit.TC1_StartPageTestcase -->
+      </class> <!-- TestSuit.UK_combinedTakeHomePayLessOrEqual£435_No -->
     </classes>
-  </test> <!-- Default test(failed) -->
+  </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
