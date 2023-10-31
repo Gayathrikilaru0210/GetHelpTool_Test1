@@ -17,7 +17,7 @@
      <classes>
       <class name="TestSuit.UK_AgeBelow16"/>
       <class name="TestSuit.UK_AgeAbove16"/>
-      <class name="TestSuit.UK_combinedTakeHomePayLessOrEqual£435_No"/> 
+      <class name="TestSuit.UK_combinedTakeHomePayLessOrEqual_435_No"/> 
     </classes>
   </test> 
  <!-- 
